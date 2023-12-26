@@ -25,15 +25,9 @@ func AsMap[K comparable, V any](c Collection[K, V, Tuple[K, V]]) *Map[K, V] {
 	return c.(*Map[K, V])
 }
 
-// GetE gets a value from the map.
-func (m *Map[K, V]) GetE(key K) (V, bool) {
-	val, ok := m.m[key]
-	return val, ok
-}
-
-// Get gets a value from the map. Panics if the key does not exist.
+// Get gets a value from the map.
 func (m *Map[K, V]) Get(key K) (v V, ok bool) {
-	v, ok = m.GetE(key)
+	v, ok = m.m[key]
 	return
 }
 

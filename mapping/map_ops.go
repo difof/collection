@@ -7,7 +7,7 @@ func Keys[K comparable, V any](m map[K]V) []K {
 		keys = append(keys, k)
 	}
 
-	return nil
+	return keys
 }
 
 func Values[K comparable, V any](m map[K]V) []V {
@@ -17,5 +17,5 @@ func Values[K comparable, V any](m map[K]V) []V {
 		values = append(values, v)
 	}
 
-	return nil
+	return values
 }
